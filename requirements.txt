@@ -1,0 +1,2 @@
+cargo-script
+Installation : cargo install cargo-script
