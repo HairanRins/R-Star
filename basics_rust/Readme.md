@@ -41,3 +41,5 @@ Exécutez avec `cargo run`
 
 Ce programme vous permettra d'explorer votre système de fichiers en utilisant des commandes simples comme `list`, `info <fichier>`, `help` et `quit`.
 
+![Capture d’écran du 2025-03-02 11-08-57](https://github.com/user-attachments/assets/7660ca6d-498a-4f35-afad-89bcbcecef55)
+
