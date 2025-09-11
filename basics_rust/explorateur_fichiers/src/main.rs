@@ -4,14 +4,12 @@ use std::path::Path;
 use std::io::{self, Write};
 use std::process;
 
-// Structure pour stocker les informations d'un fichier
 struct FileInfo {
     name: String,
     is_dir: bool,
     size: u64,
 }
 
-// Énumération pour les commandes disponibles
 enum Command {
     List,
     Info(String),
@@ -35,7 +33,6 @@ fn main() {
 
     println!("Répertoire de travail: {:?}\n", current_dir);
 
-    // Boucle principale du programme
     loop {
         print!("> ");
         io::stdout().flush().unwrap();
@@ -88,7 +85,6 @@ fn parse_command(input: &str) -> Command {
 
 // Affiche le contenu du répertoire actuel
 fn list_directory(dir: &Path) {
-    // Utilise Result et match pour gérer les erreurs
     match fs::read_dir(dir) {
         Ok(entries) => {
             // Collecte les informations sur les fichiers
@@ -121,7 +117,6 @@ fn list_directory(dir: &Path) {
                 }
             });
             
-            // Affiche les fichiers
             println!("Contenu du répertoire:");
             for file in files {
                 let file_type = if file.is_dir { "DIR" } else { "FILE" };
